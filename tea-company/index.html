@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Делаем Чай</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      padding-top: 16px;
+      padding-bottom: 16px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+    }
+
+    .navbar-nav {
+      gap: 50px;
+    }
+
+    .nav-link {
+      color: #000 !important;
+      font-weight: 500;
+      font-size: 18px;
+    }
+
+    .nav-link:hover {
+      color: #4CAF50 !important;
+    }
+
+    body {
+      padding-top: 100px;
+    }
+
+    .hero-section {
+      background-color: #e9f5ec;
+      padding: 120px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 80px;
+    }
+
+    .hero-box {
+      background-color: #2b2b2b;
+      color: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .hero-box h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .advantages-section {
+      padding: 60px 20px;
+      
+    }
+
+    .advantage-item {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: #fff;
+      transition: transform 0.3s;
+      height: 180px; /* Установим фиксированную высоту для симметрии */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Центрируем содержимое по вертикали */
+    }
+
+    .advantage-item:hover {
+      transform: scale(1.05);
+    }
+
+    .advantage-item img {
+      max-height: 50px; /* Ограничиваем максимальную высоту */
+      max-width: 100%; /* Ограничиваем максимальную ширину */
+      margin-bottom: 10px;
+      object-fit: contain; /* Сохраняем пропорции изображения */
+    }
+
+    .advantage-item h5 {
+      font-weight: 600;
+      margin: 0; /* Убираем отступы */
+    }
+    .offer-section {
+  padding: 60px 20px;
+
+}
+
+.offer-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  transition: transform 0.3s;
+}
+
+.offer-item:hover {
+  transform: scale(1.05);
+}
+.footer {
+  background-color: #f9f9f9; /* Цвет фона подвала */
+}
+
+.footer h5 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer a {
+  text-decoration: none; /* Убираем подчеркивание */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="logo.png" alt="Логотип">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="catalog.html">Каталог</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="company.html">Компания</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero-section">
+  <div class="container text-center">
+    <div class="hero-box shadow">
+      <h1>Совершенство в чайном производстве</h1>
+      <p>С нами легко начать — мы организуем всё под ключ</p>
+      <a href="#" class="btn btn-light mt-3">Узнать больше</a>
+    </div>
+  </div>
+</section>
+
+<section class="advantages-section container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="advantage-item">
+        <img src="icon1.png" alt="Гарантия">
+        <h5>Гарантия на оборудование 1 год</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="advantage-item">
+        <img src="icon2.png" alt="Доставка">
+        <h5>Доставка во все регионы РФ</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="advantage-item">
+        <img src="icon3.png" alt="Шефмонтаж">
+        <h5>Шефмонтаж и пусконаладка оборудования</h5>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="advantage-item">
+        <img src="icon4.png" alt="Поддержка">
+        <h5>Постоянная техническая поддержка</h5>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="offer-section container my-5">
+  <h2 class="text-center mb-4">Мы предлагаем</h2>
+  <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product1.jpg" alt="Оборудование для производства чая" class="img-fluid mb-3">
+              <h5>Оборудование для производства чая</h5>
+              <p>Современные технологии для эффективного производства чая.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product2.jpg" alt="Автоматические линии" class="img-fluid mb-3">
+              <h5>Автоматические линии для производства чая</h5>
+              <p>Полная автоматизация процессов для повышения производительности.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product3.jpg" alt="Оборудование для упаковки" class="img-fluid mb-3">
+              <h5>Оборудование для упаковки чая</h5>
+              <p>Эффективные решения для упаковки и фасовки.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product4.jpg" alt="Оборудование для фасовки" class="img-fluid mb-3">
+              <h5>Оборудование для фасовки</h5>
+              <p>Точное и быстрое фасование чая.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product5.jpg" alt="Чайные машины" class="img-fluid mb-3">
+              <h5>Чайные машины</h5>
+              <p>Надежные машины для чайного производства.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="offer-item text-center">
+              <img src="product6.jpg" alt="Дополнительное оборудование" class="img-fluid mb-3">
+              <h5>Дополнительное оборудование</h5>
+              <p>Всё необходимое для производства чая.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#offerCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Назад</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#offerCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Вперед</span>
+    </button>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="footer bg-light text-center text-lg-start mt-5">
+  <div class="container p-4">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-uppercase">Делаем Чай</h5>
+        <p>Цель нашей компании – поставка качественного оборудования для производства и упаковки чая.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-uppercase">Контакты</h5>
+        <p>Телефон: 8 (800) 707-19-44</p>
+        <p>Email: <a href="mailto:delaemchay@eg-mail.ru">delaemchay@eg-mail.ru</a></p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4">
+        <h5 class="text-uppercase">Навигация</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-dark">Каталог</a></li>
+          <li><a href="#" class="text-dark">Компания</a></li>
+          <li><a href="#" class="text-dark">Контакты</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="text-center p-3" style="background-color: #e9f5ec;">
+    © 2025 Делаем Чай. Все права защищены.
+  </div>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
