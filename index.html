@@ -4,7 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Делаем Чай</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"  rel="stylesheet">
+
   <style>
     .navbar {
       background-color: #fff;
@@ -66,7 +67,6 @@
 
     .advantages-section {
       padding: 60px 20px;
-      
     }
 
     .advantage-item {
@@ -76,10 +76,10 @@
       border-radius: 10px;
       background-color: #fff;
       transition: transform 0.3s;
-      height: 180px; /* Установим фиксированную высоту для симметрии */
+      height: 180px;
       display: flex;
       flex-direction: column;
-      justify-content: center; /* Центрируем содержимое по вертикали */
+      justify-content: center;
     }
 
     .advantage-item:hover {
@@ -87,48 +87,77 @@
     }
 
     .advantage-item img {
-      max-height: 50px; /* Ограничиваем максимальную высоту */
-      max-width: 100%; /* Ограничиваем максимальную ширину */
+      max-height: 50px;
+      max-width: 100%;
       margin-bottom: 10px;
-      object-fit: contain; /* Сохраняем пропорции изображения */
+      object-fit: contain;
     }
 
     .advantage-item h5 {
       font-weight: 600;
-      margin: 0; /* Убираем отступы */
+      margin: 0;
     }
+
     .offer-section {
-  padding: 60px 20px;
+      padding: 60px 20px;
+    }
 
-}
+    .offer-item {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      transition: transform 0.3s;
+      height: 100%; /* Важно! */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Равномерное распределение */
+    }
 
-.offer-item {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  transition: transform 0.3s;
-}
+    .offer-item:hover {
+      transform: scale(1.05);
+    }
 
-.offer-item:hover {
-  transform: scale(1.05);
-}
-.footer {
-  background-color: #f9f9f9; /* Цвет фона подвала */
-}
+    .offer-item img {
+      max-width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
 
-.footer h5 {
-  font-weight: bold;
-  margin-bottom: 20px;
-}
+    .offer-item h5 {
+      font-weight: 600;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
 
-.footer a {
-  text-decoration: none; /* Убираем подчеркивание */
-}
+    .offer-item p {
+      flex-grow: 1;
+      overflow: hidden;
+    }
 
-.footer a:hover {
-  text-decoration: underline; /* Подчеркивание при наведении */
-}
+    .carousel-item .row > div {
+      display: flex;
+    }
 
+    .carousel-item .offer-item {
+      height: 100%;
+    }
+
+    .footer {
+      background-color: #f9f9f9;
+    }
+
+    .footer h5 {
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -196,28 +225,29 @@
     </div>
   </div>
 </section>
+
 <section class="offer-section container my-5">
   <h2 class="text-center mb-4">Мы предлагаем</h2>
   <div id="offerCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+        <div class="row g-4">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product1.jpg" alt="Оборудование для производства чая" class="img-fluid mb-3">
               <h5>Оборудование для производства чая</h5>
               <p>Современные технологии для эффективного производства чая.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product2.jpg" alt="Автоматические линии" class="img-fluid mb-3">
               <h5>Автоматические линии для производства чая</h5>
               <p>Полная автоматизация процессов для повышения производительности.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product3.jpg" alt="Оборудование для упаковки" class="img-fluid mb-3">
               <h5>Оборудование для упаковки чая</h5>
               <p>Эффективные решения для упаковки и фасовки.</p>
@@ -226,23 +256,23 @@
         </div>
       </div>
       <div class="carousel-item">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+        <div class="row g-4">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product4.jpg" alt="Оборудование для фасовки" class="img-fluid mb-3">
               <h5>Оборудование для фасовки</h5>
               <p>Точное и быстрое фасование чая.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product5.jpg" alt="Чайные машины" class="img-fluid mb-3">
               <h5>Чайные машины</h5>
               <p>Надежные машины для чайного производства.</p>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="offer-item text-center">
+          <div class="col-md-4 d-flex">
+            <div class="offer-item text-center w-100 d-flex flex-column">
               <img src="product6.jpg" alt="Дополнительное оборудование" class="img-fluid mb-3">
               <h5>Дополнительное оборудование</h5>
               <p>Всё необходимое для производства чая.</p>
@@ -262,7 +292,8 @@
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
 <footer class="footer bg-light text-center text-lg-start mt-5">
   <div class="container p-4">
     <div class="row">
@@ -278,10 +309,10 @@
       <div class="col-lg-4 col-md-6 mb-4">
         <h5 class="text-uppercase">Навигация</h5>
         <ul class="list-unstyled">
-                    <li><a href="catalog.html" class="text-dark">Каталог</a></li>
-                    <li><a href="company.html" class="text-dark">Компания</a></li>
-                    <li><a href="contacts.html" class="text-dark">Контакты</a></li>
-                </ul>
+          <li><a href="catalog.html" class="text-dark">Каталог</a></li>
+          <li><a href="company.html" class="text-dark">Компания</a></li>
+          <li><a href="contacts.html" class="text-dark">Контакты</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -289,9 +320,9 @@
     © 2025 Делаем Чай. Все права защищены.
   </div>
 </footer>
+
 </body>
 </html>
-
 
 
 
